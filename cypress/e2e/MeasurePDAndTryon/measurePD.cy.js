@@ -1,0 +1,26 @@
+///<reference types = "Cypress"/>
+
+describe('Measure PD', function () {
+    it('TC_001 - Measure PD', function () {
+        cy.visit('/')
+        cy.wait(2000)
+        cy.reload()
+        cy.get(':nth-child(4) > .list-unstyled > :nth-child(6) > a').should('contain.text', 'Measure PD').click()
+        cy.wait(2000)
+        cy.get('.measure-pd-section > center > .btn').should('contain.text', ' Click To Start Our Online PD Tool ').click()
+        cy.wait(1000)
+        cy.get('.veero-eyefit-h2').should('exist')
+        cy.get("div[id='veero-launch-cc-button'] button[type='button']").click()
+        cy.wait(1000)
+        cy.get('#veero-eyesize-message-text').should('exist')
+        cy.wait(3000)
+        cy.get('#veero-eyesize-button').click()
+        cy.wait(1000)
+        cy.get('#veero-eyesize-button').click()
+        cy.wait(1000)
+        cy.get('#veero-eyesize-button').click()
+        cy.wait(1000)
+        cy.get('#veero-eyesize-skip-instructions-button').click()
+        cy.get('#veero-eyesize-message-text').should('exist')
+    })
+})
