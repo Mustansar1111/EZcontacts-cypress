@@ -141,14 +141,6 @@ Reports are saved in the `mochawesome-report/` folder.
 💼 Portfolio: In Progress
 🌱 Skills: Cypress, JavaScript, Manual+Automation Testing, Git, CI/CD
 
----
-
-## 💡 Suggestions for Improvement
-
-* Add GitHub Actions for CI
-* Generate HTML Reports via Mochawesome
-* Parameterize test data via JSON or `.env`
-* Add badges (Build Passing, Cypress, Node)
 
 ---
 
